@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* @import "main.css"; */ /* main.css 적용방법 */
+/* @import "sub.css"; */ /* sub.css적용방법 */
+/* 초기화 */
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd { margin: 0; padding: 0;}
+li { list-style: none; }
+a { text-decoration: none;}
+hr {display: none; }
+small { font-size: 1em; }
+address { font-style: normal;}
+.hidden { position: absolute; left: -9999px; }
+/* 웹폰트 */
+@font-face { font-family: segoeui;
+             src: url(../webfont/segoeui.ttf),
+                  url(../webfont/segoeui.eot),
+                  url(../webfont/segoeui.woff);
+            }
+/* body */
+body { font-family: "Segoe UI", segoeui, sans-serif ;}
+/* 헤더 */
+#header { width: 1000px; height: 187px; margin: 0 auto; position: relative; }
+#header h1 { width: 249px; padding: 90px 0 0 50px; }
+#header h1 a { display: block; height: 50px; background: #3e3f3e url(../images/logo.png) no-repeat center/cover ; text-indent: -9999px; } /* 부모요소의 넓이 그대로 가져감 넓이 생략가능*/
+/* 멤버쉽 */
+#membership { width: 150px; position:absolute; top: 18px; right: 80px; }
+#membership ul { }
+#membership ul li { position: relative; width: 20%; float: left;}
+#membership ul li a { color: #333; font-size: 14px;}
+#membership ul li.goLogin {  padding-right: 9px;}
+#membership ul li.goLogin::after { content: ""; position: absolute; top: 7px; right: 0; height: 11px; border-right: 1px solid #bea082; }
+#membership ul li.goJoin {  padding-left: 9px; }
+#membership ul li.goJoin::before { content: ""; position: absolute; top: 7px; right: 0; height: 11px;}
+/* gnb */
+#gnb { position:absolute; top: 106px; right: 40px;}
+#gnb ul { }
+#gnb ul li { float: left; margin-left: 10px; }
+#gnb ul li a { padding: 0 10px 10px; text-transform: uppercase; color: #333; }
+#gnb ul li a:hover { border-bottom: 3px solid #00bff3;}
+/* footer */
+#footerWrap { margin-top: 55px; border-top: 1px solid #a0a0a0;  }
+#footer { width: 720px; margin: 0 auto ; background: url(../images/logoFooter.png) no-repeat 55px 23px; overflow: hidden; padding: 23px 76px 20px 204px; }
+#footer .info { float: left; }
+#footer .info small { }
+#footer .info address { }
+#footer .sns { float: right; height: 33px; }
+#footer .sns li { width: 33px; height: 33px; float: left; margin-left: 17px;  }
+#footer .sns li a { display: block; width: 33px; height: 33px; text-indent: -9999px; background: url(../images/bgSns.png) no-repeat;}
+#footerWrap #footer .sns .twitter a { background-position-x: right; }
+
